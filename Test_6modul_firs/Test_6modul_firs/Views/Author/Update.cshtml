@@ -1,0 +1,28 @@
+﻿@model Test_6modul_firs.Models.Author
+
+@{
+    ViewData["Title"] = "Update";
+}
+
+<h1>Edit Author</h1>
+
+<form asp-action="Update" method="post">
+    <input type="hidden" asp-for="AuthorId" />
+    <div class="form-group">
+        <label asp-for="FullName"></label>
+        <input asp-for="FullName" class="form-control" />
+        <span asp-validation-for="FullName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Birthday"></label>
+        <input asp-for="Birthday" type="date" class="form-control" />
+        <span asp-validation-for="Birthday" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+    <a asp-action="Index">Back to List</a>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
